@@ -1,0 +1,51 @@
+.principal {
+    width: 512px;
+    height: 512px;
+    padding-top: 10px;
+    text-align: center;
+    margin: 0 auto; 
+    color: white;  
+}
+
+body {
+    background-color: rgb(39, 39, 39);
+}
+
+#overlay {
+    position: fixed; /* Sit on top of the page content */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 100%; /* Full height (cover the whole page) */
+    background-color: rgba(0,0,0,0.8); /* Black background with opacity */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.titulo-snake {
+    width: 700px;
+    height: 300px;
+    border-radius:1em;
+    text-align: center;
+    margin: 0 auto; 
+    color: black; 
+    background-color: aliceblue;    
+}
+
+.botao-principal {
+    
+    text-align: center;
+    margin: 0 auto; 
+    background-color: aliceblue;
+}
+
+.borda-game {
+    width: 600px;
+    height: 640px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+    background-color:
+}
+
+
