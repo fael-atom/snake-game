@@ -27,7 +27,7 @@ As seguintes ferramentas foram utilizadas neste projeto:
 
 ## :pray: Agradecimentos
 
-Os meus agradecimentos à plataforma Digital Innovation One (DIO) pelos excelentes cursos que me possibilitaram criar esta pequena página chamada Petflix.
+Os meus agradecimentos à plataforma Digital Innovation One (DIO) pelos excelentes cursos que me possibilitaram criar este pequeno jogo.
 
 ## :memo: Licença ##
 
