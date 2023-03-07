@@ -61,7 +61,7 @@ function iniciarJogo() {
   for (i = 1; i < snake.length; i++) {
     if (snake[0].x == snake[i].x && snake[0].y == snake[i].y) {
       clearInterval(jogo);
-      alert("Game Over :(");
+      gameOver();
     }
   }
 
@@ -86,7 +86,6 @@ function iniciarJogo() {
     food.y = Math.floor(Math.random() * 15 + 1) * box;
   }
 
-
   let newHead = {
     x: snakeX,
     y: snakeY,
@@ -95,4 +94,25 @@ function iniciarJogo() {
   snake.unshift(newHead);
 }
 
-let jogo = setInterval(iniciarJogo, 1500);
+let jogo = setInterval(iniciarJogo, 150);
+
+// ATIVA MODAL
+
+const modal = document.querySelector("#modal");
+const fade = document.querySelector("#fade");
+const restartBtn = document.querySelector("#restart-btn");
+
+function toggleModal() {
+  [modal, fade].forEach((el) => {
+    el.classList.toggle("hide");
+  });
+}
+
+function gameOver() {
+  toggleModal();
+}
+
+restartBtn.addEventListener("click", () => {
+  toggleModal();
+  location.reload(); // Reinicia a página
+});
