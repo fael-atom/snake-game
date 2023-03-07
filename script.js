@@ -116,3 +116,10 @@ restartBtn.addEventListener("click", () => {
   toggleModal();
   location.reload(); // Reinicia a página
 });
+
+document.addEventListener("keydown", (event) => {
+  if (event.keyCode == 13) {
+    toggleModal();
+    location.reload(); // Reinicia a página
+  }
+});
