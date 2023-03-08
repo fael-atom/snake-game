@@ -57,6 +57,7 @@ function update(event) {
 function iniciarJogo() {
   // Seta o valor do score
   scoreFinal.textContent = localStorage.pontuacao;
+  
   // Muda a direção da cobrinha ao atingir a borda
   if (snake[0].x > 15 * box && direction == "right") snake[0].x = 0;
   if (snake[0].x < 0 && direction == "left") snake[0].x = 16 * box;
