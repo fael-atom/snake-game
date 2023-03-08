@@ -10,6 +10,7 @@
 <head>
 
 <body>
+    <!-- MODAL DE GAME OVER -->
     <div id="fade" class="hide"></div>
     <div id="modal" class="hide">
         <div class="modal-header">
@@ -40,17 +41,27 @@
         </div>
     </div>
     -->
-    <fieldset class="borda-game">
-        <legend>
-            <h1>SNAKE GAME</h1>
-        </legend>
-        <div>
-            <div class="principal">
-                <canvas id="snake" width="512" height="512"></canvas>
-            </div>
+    <div class="container">
+        <div class="score-body">
+            <h2>Melhor score:</h2>
+            <p class="score">0</p>
         </div>
-    </fieldset>
 
+        <div class="level-body">
+            <h2>Dificuldade:</h2>
+            <p class="level">NORMAL</p>
+        </div>
+        <fieldset class="borda-game">
+            <legend>
+                <h1>SNAKE GAME</h1>
+            </legend>
+            <div>
+                <div class="principal">
+                    <canvas id="snake" width="512" height="512"></canvas>
+                </div>
+            </div>
+        </fieldset>
+    </div>
 </body>
 
 </html>

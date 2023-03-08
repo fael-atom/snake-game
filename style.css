@@ -1,3 +1,46 @@
+body {
+    background-color: rgb(39, 39, 39);
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items:start;
+}
+
+.level-body {
+    text-align: center;
+    grid-column: 1;
+    grid-row: 1;
+    
+}
+
+.score-body {
+    text-align: center;
+    grid-column: 3;
+}
+
+.score-body h2,
+.level-body h2 {
+    display: inline;
+    padding: 10px 20px;
+    margin-top: 20px;
+    font-size: 2rem;
+    color: #fff;
+    background-color: blue;
+}
+
+.score,
+.level {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 50px;
+}
+
 .principal {
     width: 512px;
     height: 512px;
@@ -7,12 +50,6 @@
     color: white;  
 }
 
-body {
-    background-color: rgb(39, 39, 39);
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
 
 #fade {
     position: fixed;
@@ -118,6 +155,8 @@ body {
     margin: 0 auto;
     text-align: center;
     color: white;
+    grid-column: 2;
+    grid-row: 1;
 }
 
 

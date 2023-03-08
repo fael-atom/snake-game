@@ -1,7 +1,10 @@
 let canvas = document.getElementById("snake");
+let scoreFinal = document.querySelector(".score");
 let context = canvas.getContext("2d");
 let box = 32; // Cada quadradinho tem 32px
 let direction = "right"; // Direção inicial da cobrinha
+let contador = 0; // Faz a contagem das comidas obtidas
+let score = 0;
 let food = {
   // Cria posições aleatórias em (x,y) em que tanto x quanto y vão de 1*box a 16*box (ou 16 quadradinhos)
   x: Math.floor(Math.random() * 15 + 1) * box,
@@ -52,6 +55,8 @@ function update(event) {
 }
 
 function iniciarJogo() {
+  // Seta o valor do score
+  scoreFinal.textContent = localStorage.pontuacao;
   // Muda a direção da cobrinha ao atingir a borda
   if (snake[0].x > 15 * box && direction == "right") snake[0].x = 0;
   if (snake[0].x < 0 && direction == "left") snake[0].x = 16 * box;
@@ -60,6 +65,11 @@ function iniciarJogo() {
 
   for (i = 1; i < snake.length; i++) {
     if (snake[0].x == snake[i].x && snake[0].y == snake[i].y) {
+      if (contador > score) {
+        localStorage.pontuacao = contador;
+        score = contador;
+        scoreFinal.textContent = localStorage.pontuacao;
+      }
       clearInterval(jogo);
       gameOver();
     }
@@ -84,6 +94,7 @@ function iniciarJogo() {
   } else {
     food.x = Math.floor(Math.random() * 15 + 1) * box;
     food.y = Math.floor(Math.random() * 15 + 1) * box;
+    contador++;
   }
 
   let newHead = {
