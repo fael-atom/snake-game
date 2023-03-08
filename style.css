@@ -9,6 +9,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     align-items:start;
+    margin-top: 20px;
 }
 
 .level-body {
@@ -28,7 +29,7 @@ body {
     display: inline;
     padding: 10px 20px;
     margin-top: 20px;
-    font-size: 2rem;
+    font-size: 3rem;
     color: #fff;
     background-color: blue;
 }
@@ -36,7 +37,7 @@ body {
 .score,
 .level {
     color: #fff;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: bold;
     margin: 50px;
 }
